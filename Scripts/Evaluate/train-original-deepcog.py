@@ -25,7 +25,7 @@ def myMultiOpt(pair):
     cells = get_rows_Milan(5060, nr)
 
 
-    model_dir = f'../../../../oracle-data/serly/Scalable_dnn/Trained_models/DeepCOG_original/{city}/{damage}'
+    model_dir = f'../../../../oracle-data/serly/Scalable_dnn/Trained_models/DeepCOG_original/{city}'
     if not os.path.exists(model_dir):
         os.makedirs(model_dir)
 
