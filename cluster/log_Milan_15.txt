@@ -1,0 +1,2 @@
+Silhouette Score: 0.176
+Time taken for clustering: 76689.68 seconds
