@@ -1,0 +1,1 @@
+Training took 93.47 seconds for Cluster 9 with size 9.

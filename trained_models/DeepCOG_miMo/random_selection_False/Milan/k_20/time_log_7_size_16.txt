@@ -1,0 +1,1 @@
+Training took 86.46 seconds for Cluster 7 with size 16.

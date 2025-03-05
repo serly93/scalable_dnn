@@ -1,0 +1,1 @@
+Training took 8.16 seconds for cell 6062.

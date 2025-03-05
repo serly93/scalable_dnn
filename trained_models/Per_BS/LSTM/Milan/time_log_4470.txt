@@ -1,0 +1,1 @@
+Training took 8.45 seconds for cell 4470.

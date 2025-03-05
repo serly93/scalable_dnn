@@ -1,0 +1,1 @@
+Training took 45.41 seconds for Cluster 11 with size 36.

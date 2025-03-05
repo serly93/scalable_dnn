@@ -1,0 +1,1 @@
+Training took 59.88 seconds for Cluster 6 with size 16.

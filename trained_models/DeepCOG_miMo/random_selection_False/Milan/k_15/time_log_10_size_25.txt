@@ -1,0 +1,1 @@
+Training took 91.43 seconds for Cluster 10 with size 25.

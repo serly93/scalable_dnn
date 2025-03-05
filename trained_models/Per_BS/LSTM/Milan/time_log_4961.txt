@@ -1,0 +1,1 @@
+Training took 8.73 seconds for cell 4961.

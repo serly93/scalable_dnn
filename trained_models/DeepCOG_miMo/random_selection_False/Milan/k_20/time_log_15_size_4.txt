@@ -1,0 +1,1 @@
+Training took 53.54 seconds for Cluster 15 with size 4.

@@ -1,0 +1,1 @@
+Training took 10.27 seconds for Cluster 5 with size 1.

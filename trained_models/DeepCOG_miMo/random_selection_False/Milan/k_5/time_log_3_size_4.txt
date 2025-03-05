@@ -1,0 +1,1 @@
+Training took 148.19 seconds for Cluster 3 with size 4.

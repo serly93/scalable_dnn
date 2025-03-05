@@ -1,0 +1,1 @@
+Training took 9.50 seconds for cell 5760.

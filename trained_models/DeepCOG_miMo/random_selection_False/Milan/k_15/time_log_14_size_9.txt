@@ -1,0 +1,1 @@
+Training took 81.87 seconds for Cluster 14 with size 9.

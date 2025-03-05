@@ -1,0 +1,1 @@
+Training took 8.19 seconds for cell 6070.

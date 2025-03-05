@@ -1,0 +1,1 @@
+Training took 28.38 seconds for Cluster 17 with size 4.

@@ -1,0 +1,1 @@
+Training took 42.87 seconds for Cluster 16 with size 36.

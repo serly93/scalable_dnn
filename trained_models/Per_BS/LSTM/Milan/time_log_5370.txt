@@ -1,0 +1,1 @@
+Training took 10.37 seconds for cell 5370.

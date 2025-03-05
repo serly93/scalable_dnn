@@ -1,0 +1,1 @@
+Training took 28.54 seconds for Cluster 19 with size 4.

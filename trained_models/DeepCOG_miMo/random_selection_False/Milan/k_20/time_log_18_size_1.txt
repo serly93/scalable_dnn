@@ -1,0 +1,1 @@
+Training took 40.36 seconds for Cluster 18 with size 1.

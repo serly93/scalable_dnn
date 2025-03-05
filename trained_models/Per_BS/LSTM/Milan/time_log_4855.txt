@@ -1,0 +1,1 @@
+Training took 8.20 seconds for cell 4855.

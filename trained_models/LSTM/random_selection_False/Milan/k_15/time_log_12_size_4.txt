@@ -1,0 +1,1 @@
+Training took 56.99 seconds for Cluster 12 with size 4.

@@ -1,0 +1,1 @@
+Training took 56.88 seconds for Cluster 0 with size 36.

@@ -1,0 +1,1 @@
+Training took 8.52 seconds for cell 6051.

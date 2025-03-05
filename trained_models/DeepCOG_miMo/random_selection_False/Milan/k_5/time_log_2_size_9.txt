@@ -1,0 +1,1 @@
+Training took 130.36 seconds for Cluster 2 with size 9.
