@@ -1,9 +1,10 @@
-Our paper will appear on IEEE ICMLCN 2025 as:
+
+In this repository we release the code of our paper:
 - **A Scalable DNN Training Framework for Traffic Forecasting in Mobile Networks** in IEEE ICMLCN 2025 - IEEE  International Conference on Machine Learning for Communication and Networking, Barcelona, Spain.
 
 *Serly Moghadas Gholian, Claudio Fiandrino and Joerg Widmer*
 
-You can cite us as: 
+If you use this code in your work, please cite our paper as follows: 
 > Moghadas Gholian, S., Fiandrino, C. and Widmer, J., "A Scalable DNN Training Framework for Traffic Forecasting in Mobile Networks" In IEEE International Conference on Machine Learning for Communication and Networking, 2025, pp. 1-7
 
 
@@ -27,4 +28,5 @@ We use two datasets:\
 -  After downloading the [dataset](https://doi.org/10.7910/DVN/EGZHFV), use the script `extract_bs.py` , to extract the internet activity from the rest of data and seperate them for each cell. 
 
 
-For any questions or problems, you can reach out to serly.moghadas@imdea.org
+For any questions or issues, feel free to reach out:
+📧 serly.moghadas@imdea.org
