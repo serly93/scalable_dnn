@@ -1,3 +1,4 @@
+## A Scalable DNN Training Framework for Traffic Forecasting in Mobile Networks
 
 In this repository we release the code of our paper:
 - **A Scalable DNN Training Framework for Traffic Forecasting in Mobile Networks** in IEEE ICMLCN 2025 - IEEE  International Conference on Machine Learning for Communication and Networking, Barcelona, Spain.
@@ -7,6 +8,9 @@ In this repository we release the code of our paper:
 If you use this code in your work, please cite our paper as follows: 
 > Moghadas Gholian, S., Fiandrino, C. and Widmer, J., "A Scalable DNN Training Framework for Traffic Forecasting in Mobile Networks" In IEEE International Conference on Machine Learning for Communication and Networking, 2025, pp. 1-7
 
+## Abstract
+
+The exponential growth of mobile data traffic demands efficient and scalable forecasting methods to optimize network performance. Traditional approaches, like training individual models for each Base Station (BS) are computationally prohibitive for large-scale production deployments. In this paper, we propose a scalable Deep Neural Networks (DNN) training framework for mobile network traffic forecasting that reduces input redundancy and computational overhead. We minimize the number of input probes (traffic monitors at Base Stations (BSs)) by grouping BS s with temporal similarity using K-means clustering with Dynamic Time Warping (DTW) as the distance metric. Within each cluster, we train a DNN model, selecting a subset of BSs as inputs to predict future traffic demand for all BSs in that cluster. To further optimize input selection, we leverage the well-known EXplainable Artificial Intelligence (XAI) technique, LayeR-wise backPropagation (LRP) to identify the most influential BS s within each cluster. This makes it possible to reduce the number of required probes while maintaining high prediction accuracy. To validate our newly proposed framework, we conduct experiments on two real-world mobile traffic datasets. Specifically, our approach achieves competitive accuracy while reducing the total number of input probes by approximately 81% compared to state-of-the-art predictors.
 
 ## Dependencies 
 - Python 3.8
