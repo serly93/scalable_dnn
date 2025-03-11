@@ -5,7 +5,7 @@ In this repository we release the code of our paper:
 
 *Serly Moghadas Gholian, Claudio Fiandrino and Joerg Widmer*
 
-If you use this code in your work, please cite our paper as follows: 
+If you use this code in your work, please cite [our paper](https://dspace.networks.imdea.org/bitstream/handle/20.500.12761/1908/authors%27%20version.pdf?sequence=2&isAllowed=y) as follows: 
 > Moghadas Gholian, S., Fiandrino, C. and Widmer, J., "A Scalable DNN Training Framework for Traffic Forecasting in Mobile Networks" In IEEE International Conference on Machine Learning for Communication and Networking, 2025, pp. 1-7
 
 ## Abstract
