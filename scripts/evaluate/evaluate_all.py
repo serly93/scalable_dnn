@@ -48,8 +48,8 @@ def process_combination(params):
     # Define model directories for each strategy.
     model_dirs = {
         "LRP-Cluster-DNN": f"../../../../oracle-data/serly/Scalable_dnn/Trained_models/DeepCOG_miMo_retrained/{city}/k_{KK}/",
-        "Centroid-Cluster-DNN": f"../../../../oracle-data/serly/Scalable_dnn/Trained_models/DeepCOG_miMo/random_selection_False/{city}/k_{KK}/",
-        "Cluster-LSTM": f"../../../../oracle-data/serly/Scalable_dnn/Trained_models/LSTM/random_selection_False/{city}/k_{KK}/",
+        "Centroid-Cluster-DNN": f"../../../../oracle-data/serly/Scalable_dnn/Trained_models/DeepCOG_miMo/{city}/k_{KK}/",
+        "Cluster-LSTM": f"../../../../oracle-data/serly/Scalable_dnn/Trained_models/LSTM/{city}/k_{KK}/",
         "LSTM-PerBS": f"../../../../oracle-data/serly/Scalable_dnn/Trained_models/Per_BS/LSTM/{city}/",
         "Global-DNN": f"../../../../oracle-data/serly/Scalable_dnn/Trained_models/DeepCOG_original/{city}/"
     }

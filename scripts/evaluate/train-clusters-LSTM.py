@@ -25,7 +25,7 @@ def myMultiOpt(pair):
     # Load cells based on the city
     cells = get_rows_Milan(5060, nr)
 
-    model_dir = f'../../../../oracle-data/serly/Scalable_dnn/Trained_models/LSTM/random_selection_{random_flag}/{city}/k_{k}'
+    model_dir = f'../../../../oracle-data/serly/Scalable_dnn/Trained_models/LSTM/{city}/k_{k}'
     
     if not os.path.exists(model_dir):
         os.makedirs(model_dir)
@@ -71,13 +71,9 @@ def myMultiOpt(pair):
         # Train one model for each cluster with the input of shape (num_cells, lookback, 1) and output of shape (total_cells, 1)
         start_time = time.time()
         
-        if random_flag == True:
-            random.seed(42)
-            selected_cells = random.sample(cluster_cells, local_num_cells)
-        else:
-            # select cells closest to the centroid
-            selected_cells = np.load(os.path.join(cluster_directory, f'closest_to_centroid/closest_bs_{city}_{k}_{cluster_label}_100.npy')).tolist()
-            selected_cells = selected_cells[:local_num_cells]
+        # select cells closest to the centroid
+        selected_cells = np.load(os.path.join(cluster_directory, f'closest_to_centroid/closest_bs_{city}_{k}_{cluster_label}_100.npy')).tolist()
+        selected_cells = selected_cells[:local_num_cells]
         print(f"Selected number of cells for cluster {cluster_label}: {len(selected_cells)}")
         # save the selected cells
         with open(os.path.join(model_dir, f'selected_cells_{cluster_label}_size_{local_num_cells}.txt'), 'w') as file:

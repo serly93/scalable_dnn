@@ -57,7 +57,7 @@ def process_combination(params):
         X_test, y_test, y_scalers = preprocess_cluster_data(selected_cells, cluster_cells, output_directory, city, lookback, local_nr2, data_type="test")
         X_test_original, y_test_original, y_scalers_original = preprocess_cluster_data(cells, cells, output_directory, city, lookback, nr, data_type="test")
 
-        model_miMo_path = os.path.join(model_deepcog_miMo, f'random_selection_{random_flag}/{city}/k_{K}/cluster_{cluster_label}_size_{local_num_cells}.h5')
+        model_miMo_path = os.path.join(model_deepcog_miMo, f'{city}/k_{K}/cluster_{cluster_label}_size_{local_num_cells}.h5')
         model_original_path = os.path.join(model_deepcog_original, f'{city}/deepcog_size_{nr}.h5')
         model_miMo = load_model_deepcog(model_miMo_path)
         predicted_miMo = model_miMo.predict(X_test)
@@ -137,15 +137,10 @@ def process_combination(params):
 
     return results
 
-# Prepare combinations for multiprocessing
-# Ks = [2, 3, 4, 5, 6, 10, 15, 20]
-# nr2_values = [2, 3, 4, 5, 6, 7]
-# cities = ['Paris', 'Milan']
-# random_flags = [False, True]
 
 Ks = [2, 3, 4, 5]
 nr2_values = [2, 3, 4, 5, 6, 7]
-cities = ['Paris']
+cities = ['Milan']
 random_flags = [True]
 combinations = [(K, nr2, city, random_flag) for K in Ks for nr2 in nr2_values for city in cities for random_flag in random_flags]
 

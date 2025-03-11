@@ -20,8 +20,8 @@ except ValueError:
 # Define base directories for each model
 models = {
     "LRP-Cluster-DNN": f"../../../../oracle-data/serly/Scalable_dnn/Trained_models/DeepCOG_miMo_retrained/{city}/k_{k}/",
-    "Centroid-Cluster-DNN": f"../../../../oracle-data/serly/Scalable_dnn/Trained_models/DeepCOG_miMo/random_selection_False/{city}/k_{k}/",
-    "Cluster-LSTM": f"../../../../oracle-data/serly/Scalable_dnn/Trained_models/LSTM/random_selection_False/{city}/k_{k}/",
+    "Centroid-Cluster-DNN": f"../../../../oracle-data/serly/Scalable_dnn/Trained_models/DeepCOG_miMo/{city}/k_{k}/",
+    "Cluster-LSTM": f"../../../../oracle-data/serly/Scalable_dnn/Trained_models/LSTM/{city}/k_{k}/",
     "LSTM-PerBS": f"../../../../oracle-data/serly/Scalable_dnn/Trained_models/Per_BS/LSTM/{city}/",
     "Global-DNN": f"../../../../oracle-data/serly/Scalable_dnn/Trained_models/DeepCOG_original/{city}/"
 }
