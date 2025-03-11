@@ -1,7 +1,7 @@
 # evaluate lstm and save them in a csv files
 import multiprocessing
 from multiprocessing import Pool
-from Scripts.Evaluate.utils_deepcog import *
+from utils_deepcog import *
 
 # Set multiprocessing start method
 multiprocessing.set_start_method('spawn', force=True)
