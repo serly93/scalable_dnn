@@ -1,6 +1,6 @@
 # after running LRP on the initial miMo model, we find the best cells to train on. We then train a new model on these cells.
 
-from Scripts.Evaluate.utils_deepcog import *
+from utils_deepcog import *
 import multiprocessing
 from multiprocessing import Pool
 from datetime import datetime

@@ -9,7 +9,7 @@ import multiprocessing
 from multiprocessing import Pool
 from datetime import datetime
 import tensorflow as tf
-from Scripts.Evaluate.utils_deepcog import *
+from utils_deepcog import *
 
 # Define the main directories
 cluster_directory = '../../../../oracle-data/serly/Scalable_dnn/cluster/'

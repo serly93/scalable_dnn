@@ -1,7 +1,7 @@
 # compute the costs (deepcog cost and mae cost) for miMo and original deepcog and save them in a csv files
 import multiprocessing
 from multiprocessing import Pool
-from Scripts.Evaluate.utils_deepcog import *
+from utils_deepcog import *
 
 # Set multiprocessing start method
 multiprocessing.set_start_method('spawn', force=True)
@@ -27,8 +27,8 @@ main_dir = f'../../../../oracle-data/serly/Scalable_dnn/MAE_plots/DeepCOG_miMo_v
 def process_combination(params):
     K, nr2, city, random_flag = params
     
-    cells = get_rows_Paris(2700, nr) if city == 'Paris' else get_rows_Milan(5060, nr)
-    length = 1780 if city == 'Milan' else 400
+    cells = get_rows_Milan(5060, nr)
+    length = 1780
     cluster_counts = np.load(os.path.join(cluster_directory, f'clusters_{city}_{K}.npy'))
     clustered_cells = {i: [] for i in range(K)}
 

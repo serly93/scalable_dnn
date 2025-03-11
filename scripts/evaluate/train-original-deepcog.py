@@ -1,5 +1,5 @@
 # Import required libraries
-from Scripts.Evaluate.utils_deepcog import *
+from utils_deepcog import *
 import multiprocessing
 from multiprocessing import Pool
 from datetime import datetime
