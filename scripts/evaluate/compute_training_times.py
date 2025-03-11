@@ -2,19 +2,19 @@ import os
 import re
 import glob
 import numpy as np
-from utils_deepcog import get_rows_Paris, get_rows_Milan  # Import BS retrieval functions
+from utils_deepcog import get_rows_Milan  # Import BS retrieval functions
 
 # User input for city, cluster (k), and grid size
 city = input("Enter city (Milan): ").strip()
 if city not in ["EUMA", "Milan"]:
-    print("❌ Invalid city! Please enter either 'EUMA' or 'Milan'.")
+    print("Invalid city! Please enter either 'EUMA' or 'Milan'.")
     exit()
 
 try:
     k = int(input("Enter total number of clusters (k): "))
     grid_size = int(input("Enter grid size: "))
 except ValueError:
-    print("❌ Invalid input! k and grid size must be numbers.")
+    print("Invalid input! k and grid size must be numbers.")
     exit()
 
 # Define base directories for each model
@@ -41,16 +41,13 @@ print(f"\n### Searching Logs for {city} | Total Clusters: {k} | Grid Size: {grid
 # Load cluster file
 cluster_assignment_file = os.path.join(cluster_directory, f'clusters_{city}_{k}.npy')
 if not os.path.exists(cluster_assignment_file):
-    print(f"❌ Cluster file not found: {cluster_assignment_file}")
+    print(f"Cluster file not found: {cluster_assignment_file}")
     exit()
 
 cluster_counts = np.load(cluster_assignment_file)
 
 # Get all BS IDs in the city
-if city == "Paris":
-    all_cells = get_rows_Paris(2700, 21)
-else:
-    all_cells = get_rows_Milan(5060, 21)
+all_cells = get_rows_Milan(5060, 21)
 
 # Dictionary to store BS IDs for each subcluster
 clustered_cells = {subcluster_id: [] for subcluster_id in range(k)}
@@ -61,8 +58,8 @@ for idx, cluster_label in enumerate(cluster_counts):
     clustered_cells[cluster_label].append(cell_id)
 
 # Debug info
-print(f"🔍 Subcluster Keys: {list(clustered_cells.keys())}")
-print(f"📌 Example cluster 0 cell IDs: {clustered_cells.get(0, [])[:5]} ...")
+print(f"Subcluster Keys: {list(clustered_cells.keys())}")
+print(f"Example cluster 0 cell IDs: {clustered_cells.get(0, [])[:5]} ...")
 
 # Process all cluster-based models (except Per-BS) for logs
 for model, base_dir in models.items():
@@ -70,7 +67,7 @@ for model, base_dir in models.items():
         # We'll handle LSTM-PerBS separately below
         continue
 
-    print(f"\n🔍 Searching logs in: {base_dir} for {model}")
+    print(f"\n Searching logs in: {base_dir} for {model}")
 
     if not os.path.exists(base_dir):
         print(f"⚠ WARNING: Directory {base_dir} does not exist for {model}!")
@@ -100,14 +97,14 @@ for model, base_dir in models.items():
             if file_grid_size != grid_size:
                 continue  # Skip logs that don't match the chosen grid size
 
-            print(f"  📂 Processing: Subcluster {cluster_label}, Grid {file_grid_size}")
+            print(f"  Processing: Subcluster {cluster_label}, Grid {file_grid_size}")
 
         elif match_global and model == "Global-DNN":
             # For Global-DNN, always use log file with grid size 21 regardless of user input.
             file_grid_size = int(match_global.group(1))
             if file_grid_size != 21:
                 continue
-            print(f"  📂 Processing Global Model, Grid {file_grid_size}")
+            print(f"  Processing Global Model, Grid {file_grid_size}")
 
         else:
             # Skip files that don't match any expected pattern
@@ -120,7 +117,7 @@ for model, base_dir in models.items():
                     if "Training took" in line:
                         time_sec = float(line.split(" ")[2])  # Extract time in seconds
                         training_times[model] += time_sec
-                        print(f"  ✅ Added {time_sec:.2f} sec to {model}")
+                        print(f"  Added {time_sec:.2f} sec to {model}")
                         break
         except Exception as e:
             print(f"⚠ Error reading {log_file}: {e}")
